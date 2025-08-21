@@ -1,1 +1,22 @@
-<p>list-video-games works!</p>
+@if (list.length > 0) {
+  <table>
+    <tbody>
+      @for (item of list; track item.label) {
+        <tr>
+          <td>
+            {{item.label}}
+          </td>
+          <td>
+            {{item.year}}
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
+
+@if(list.length === 0) {
+  <p>Aucun jeu présent</p>
+}
+
+<button (click)="remove()">-1</button>
