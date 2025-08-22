@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import {VideoGames} from "../../models/video-games";
+import {VideoGame, VideoGames} from "../../models/video-games";
+import {TableVideoGames} from "../table-video-games/table-video-games";
 
 @Component({
   selector: 'app-list-video-games',
-  imports: [],
+  imports: [TableVideoGames],
   templateUrl: './list-video-games.html',
   styleUrl: './list-video-games.css'
 })
@@ -13,7 +14,13 @@ export class ListVideoGames {
     {label: 'BF6', year: 2025},
   ];
 
-  remove(): void {
-    this.list.pop();
+  titre = 'Le super tableau des jeux vidéos';
+
+  remove(item: VideoGame): void {
+    const index = this.list.findIndex(video => video.label === item.label);
+
+    if (index !== -1) {
+      this.list.splice(index, 1);
+    }
   }
 }
