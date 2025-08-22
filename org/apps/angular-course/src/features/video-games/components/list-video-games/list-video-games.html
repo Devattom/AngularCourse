@@ -1,22 +1,11 @@
 @if (list.length > 0) {
-  <table>
-    <tbody>
-      @for (item of list; track item.label) {
-        <tr>
-          <td>
-            {{item.label}}
-          </td>
-          <td>
-            {{item.year}}
-          </td>
-        </tr>
-      }
-    </tbody>
-  </table>
+  <app-table-video-games
+    [items]="list"
+    [tableTitre]="titre"
+    (elementRemoved)="remove($event)"
+  />
 }
 
 @if(list.length === 0) {
   <p>Aucun jeu présent</p>
 }
-
-<button (click)="remove()">-1</button>
