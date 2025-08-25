@@ -1,0 +1,11 @@
+<h1>Ajout d'un jeu-vidéo</h1>
+
+<form #addVideoGameForm="ngForm">
+  <label for="">Titre</label>
+  <input required name="label" type="text" [(ngModel)]="videoGame.label">
+
+  <label for="">Année de sortie</label>
+  <input required name="year" type="number" [(ngModel)]="videoGame.year">
+
+  <button [disabled]="!addVideoGameForm.form.valid" (click)="save()">Ajouter</button>
+</form>
