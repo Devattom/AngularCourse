@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {VideoGame, VideoGames} from "../../models/video-games";
 import {TableVideoGames} from "../table-video-games/table-video-games";
+import {AddVideoGame} from "../add-video-game/add-video-game";
 
 @Component({
   selector: 'app-list-video-games',
-  imports: [TableVideoGames],
+  imports: [TableVideoGames, AddVideoGame],
   templateUrl: './list-video-games.html',
   styleUrl: './list-video-games.css'
 })
