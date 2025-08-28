@@ -1,0 +1,10 @@
+<!--@let peopleResult = people$ | async;-->
+<!--@let peopleResult = signalPeople();-->
+
+<select>
+@for(item of signalPeople(); track item.id) {
+  <option value="{{item.id}}">
+    {{item.surname}}
+  </option>
+}
+</select>

@@ -5,7 +5,7 @@ import {JsonPipe} from "@angular/common";
 
 @Component({
   selector: 'app-add-video-game',
-  imports: [FormsModule, JsonPipe],
+  imports: [FormsModule],
   templateUrl: './add-video-game.html',
   styleUrl: './add-video-game.css'
 })
