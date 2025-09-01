@@ -1,7 +1,7 @@
 export const environment = {
   apis : {
     person: {
-      url: ''
+      url: 'https://swapi.tech/api/people'
     }
   }
 };
