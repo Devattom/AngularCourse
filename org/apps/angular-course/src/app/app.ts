@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcome } from './nx-welcome';
+import {MatSliderModule} from '@angular/material/slider';
 import {ListVideoGames} from "../features/video-games/components/list-video-games/list-video-games";
 
 @Component({
-  imports: [ListVideoGames],
+  imports: [ListVideoGames, MatSliderModule],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
