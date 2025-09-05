@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {VideoGame, VideoGames} from "../../models/video-games";
 import {TableVideoGames} from "../table-video-games/table-video-games";
 import {AddVideoGame} from "../add-video-game/add-video-game";
@@ -10,7 +10,7 @@ import {FilterVideoGames} from "../filter-video-games/filter-video-games";
   templateUrl: './list-video-games.html',
   styleUrl: './list-video-games.css'
 })
-export class ListVideoGames {
+export class ListVideoGames implements OnInit, OnDestroy{
   list: VideoGames = [
     {label: 'The finals', year: 2017},
     {label: 'BF6', year: 2025},
@@ -24,5 +24,12 @@ export class ListVideoGames {
     if (index !== -1) {
       this.list.splice(index, 1);
     }
+  }
+
+  ngOnInit(): void {
+    console.info('ListVideoGames initialized');
+  }
+  ngOnDestroy() {
+    console.info('ListVideoGames destroyed');
   }
 }
