@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {MatSliderModule} from '@angular/material/slider';
-import {ListVideoGames} from "../features/video-games/components/list-video-games/list-video-games";
+import {RouterOutlet} from "@angular/router";
+import {MainMenu} from "../shared/menu/main-menu/main-menu";
 
 @Component({
-  imports: [ListVideoGames, MatSliderModule],
+  imports: [RouterOutlet, MatSliderModule, MainMenu],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',

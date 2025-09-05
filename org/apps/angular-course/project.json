@@ -25,6 +25,7 @@
           }
         ],
         "styles": [
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
           "@angular/material/prebuilt-themes/cyan-orange.css",
           "apps/angular-course/src/custom-theme.scss",
           "apps/angular-course/src/styles.css"
