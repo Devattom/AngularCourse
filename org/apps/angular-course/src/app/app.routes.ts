@@ -1,6 +1,8 @@
 import { Route } from '@angular/router';
-import {ListVideoGames} from "../features/video-games/components/list-video-games/list-video-games";
+import { NotFound } from '../shared/errors/not-found/not-found';
+import { videoGamesRoute } from '../features/video-games/video-games.route';
 
 export const appRoutes: Route[] = [
-  { path: 'video-games', component: ListVideoGames },
+  { path: '', children: videoGamesRoute },
+  { path: '**', component: NotFound },
 ];
