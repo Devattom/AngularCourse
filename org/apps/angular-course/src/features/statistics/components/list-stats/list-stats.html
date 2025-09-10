@@ -1,0 +1,10 @@
+@let stats = stats$ | async;
+
+<h2>{{ title$ | async }}</h2>
+
+
+@for (stat of stats; track stat) {
+    <div>
+        {{ stat.year }}: Success {{ stat.nbSuccess}}
+    </div>
+}
