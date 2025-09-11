@@ -12,8 +12,8 @@ import {FilterVideoGames} from "../filter-video-games/filter-video-games";
 })
 export class ListVideoGames implements OnInit, OnDestroy{
   list: VideoGames = [
-    {label: 'The finals', year: 2017},
-    {label: 'BF6', year: 2025},
+    {id: 1, label: 'The finals', year: 2017},
+    {id: 2, label: 'BF6', year: 2025},
   ];
 
   titre = 'Le super tableau des jeux vidéos';

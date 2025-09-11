@@ -3,3 +3,21 @@
 @if(params) {
     <p>Id : {{ params['id'] }}</p>
 }
+
+
+<form [formGroup]="videoGameFormGroup">
+    <label for="label">Label</label>
+    <input id="label" type="text" formControlName="label">
+    <br>
+    <br>
+    <label for="year">Year</label>
+    <input id="year" type="text" formControlName="year">
+    <br>
+    <br>
+    <button 
+    (click)="saveOne()"
+    [disabled]="!videoGameFormGroup.valid"
+    >
+    Enregistrer
+</button>
+</form>
